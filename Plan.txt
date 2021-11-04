@@ -1,0 +1,58 @@
+To-Do List
+
+--------------------------------------
+Modelos:
+-Usuarios
+	-ID
+	-Nombre de Usuario
+	-Contraseña
+	-Nombre
+	-Apellido
+	-Correo Electrónico
+	-Profesión
+	-Nivel
+
+-Tareas
+	-ID
+	-User_ID
+	-Nombre
+	-Descripcion
+	-Etiquetas
+	-Estatus
+
+-TareasEtiquetas
+	-ID
+	-TareaID
+	-EtiquetaID
+
+-Etiquetas
+	-ID
+	-Etiqueta
+
+-Estatus
+	-ID
+	-Estatus
+
+---------------------------------------------
+Controladores:
+-LoginController
+	-Login
+	-Registrar
+	-Olvidar contraseña (opcional)
+
+-UserController
+
+-TareaController
+
+-------------------------------------------
+Vistas:
+	-Login
+	-Registro
+	-Olvidar contraseña (opcional)
+	-Tareas
+	-Buscar Usuarios
+	-Editar Usuarios
+	-Editar tareas
+	-Crear tareas (Ver si unirla con la de editar)
+
+

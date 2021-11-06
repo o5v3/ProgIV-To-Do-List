@@ -1,4 +1,8 @@
 <?php 
+
+/* 
+    Representa la conexion que tiene el programa con la base de datos.
+*/
 class DB {
     protected $db;
 

@@ -1,0 +1,14 @@
+.planilla-de-menu{
+    margin-left: 15%;
+    margin-top: 10%;
+    width:70%;
+    height:80%;
+    background-color: rgb(255, 248, 220);
+}
+.tabla-de-tarea{
+    display: inline-block;
+    margin-top:10%;
+    margin-left:40%;
+    color:white;
+    background-color: rgb(24, 29, 46);
+}

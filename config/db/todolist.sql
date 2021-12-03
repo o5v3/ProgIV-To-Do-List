@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Servidor: 127.0.0.1
--- Tiempo de generación: 05-11-2021 a las 00:57:27
--- Versión del servidor: 10.1.38-MariaDB
--- Versión de PHP: 7.3.2
+-- Host: 127.0.0.1
+-- Generation Time: Nov 09, 2021 at 12:49 AM
+-- Server version: 10.4.20-MariaDB
+-- PHP Version: 8.0.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -19,35 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `todolist`
+-- Database: `todolist`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `status`
---
-
-CREATE TABLE `status` (
-  `ID` int(11) NOT NULL,
-  `status` varchar(255) COLLATE latin1_spanish_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `tags`
---
-
-CREATE TABLE `tags` (
-  `ID` int(11) NOT NULL,
-  `tag` varchar(255) COLLATE latin1_spanish_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `tareas`
+-- Table structure for table `tareas`
 --
 
 CREATE TABLE `tareas` (
@@ -56,25 +33,17 @@ CREATE TABLE `tareas` (
   `name` varchar(255) COLLATE latin1_spanish_ci NOT NULL,
   `description` varchar(255) COLLATE latin1_spanish_ci NOT NULL,
   `tag` varchar(255) COLLATE latin1_spanish_ci NOT NULL,
-  `status` varchar(255) COLLATE latin1_spanish_ci NOT NULL
+  `status` varchar(255) COLLATE latin1_spanish_ci NOT NULL,
+  `creation_date` datetime DEFAULT NULL,
+  `update_date` datetime DEFAULT NULL,
+  `delete_date` datetime DEFAULT NULL,
+  `deleted` tinyint(1) DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci;
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tareas_etiquetas`
---
-
-CREATE TABLE `tareas_etiquetas` (
-  `ID` int(11) NOT NULL,
-  `tareaID` int(11) NOT NULL,
-  `tagID` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `users`
+-- Table structure for table `users`
 --
 
 CREATE TABLE `users` (
@@ -89,38 +58,43 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci;
 
 --
--- Índices para tablas volcadas
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`ID`, `username`, `password`, `name`, `lastname`, `email`, `profession`, `level`) VALUES
+(1, 'admin', '$2y$10$pl6gUkp/Nut4oIyI.HtDXOLBR9Ou4jm5rKjaqnvdMtnhpuTjZzJkS', 'admin', 'admin', 'admin@gmail.com', 'admin', 1);
+
+--
+-- Indexes for dumped tables
 --
 
 --
--- Indices de la tabla `status`
---
-ALTER TABLE `status`
-  ADD PRIMARY KEY (`ID`);
-
---
--- Indices de la tabla `tags`
---
-ALTER TABLE `tags`
-  ADD PRIMARY KEY (`ID`);
-
---
--- Indices de la tabla `tareas`
+-- Indexes for table `tareas`
 --
 ALTER TABLE `tareas`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indices de la tabla `tareas_etiquetas`
---
-ALTER TABLE `tareas_etiquetas`
-  ADD PRIMARY KEY (`ID`);
-
---
--- Indices de la tabla `users`
+-- Indexes for table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`ID`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `tareas`
+--
+ALTER TABLE `tareas`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

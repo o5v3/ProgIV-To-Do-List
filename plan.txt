@@ -1,0 +1,66 @@
+-Sweet Alert
+-jQuery
+
+Model:
+	-Usuarios
+	-Tareas
+
+View:
+	-Login
+	-Registro
+	-Olvidar contraseña (opcional)
+	-Tareas
+	-Buscar Usuarios
+	-Editar Usuarios
+	-Editar tareas
+	-Crear tareas (Ver si unirla con la de editar)
+
+Controller:
+-LoginController
+	-Login
+	-Registrar
+	-Olvidar contraseña (opcional)
+
+-UserController
+
+-TareaController
+
+Flowchart:
+-Llega a la pagina de inicio
+-Registra usuario o inicia sesion
+-Se le muestran sus tareas.
+-Puede crear, modificar o eliminar tareas.
+-Si es admin, puede modificar otros usuarios y sus tareas.
+
+Division de tareas:
+-PHP: Administrar la base de datos, dar informacion y
+proveer las vistas, ademas de las rutas (Solo para peticiones).
+-JS: Presentar la informacion al usuario y preparar la entrada
+para PHP. 
+
+PHP Classes:
+
+JS Classes:
+
+
+Routes:
+	-Index
+	-Iniciar sesion
+		-Submit
+	-Registro
+		-Submit
+	-Lista
+	-Usuario
+		-Ver
+		-Crear
+			-Submit
+		-Editar
+			-Submit
+		-Eliminar
+	-Tareas
+		-Ver
+		-Crear
+			-Submit
+		-Editar
+			-Submit
+		-Eliminar

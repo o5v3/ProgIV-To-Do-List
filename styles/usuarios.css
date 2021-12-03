@@ -1,0 +1,32 @@
+.usuarios {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.usuario {
+    display:flex;
+    background-color: white;
+    border-radius: 10%;
+    height: 30%;
+    padding: 1%;
+    width: 10%;
+    text-align: center;
+    justify-content: center;
+    margin: 2%;
+}
+
+.usuario-edit {
+    position:relative;
+    display:flex;
+    background-color: rgba(0, 0, 0, 0.623);
+    margin-top:10%;
+    margin-left:17%;
+    width: 65%;
+    height: 70%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 30px;
+}

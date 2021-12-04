@@ -1,7 +1,7 @@
 <?php
-require_once("../controllers/LoginController.php");
-require_once("../controllers/TareaController.php");
-require_once("../controllers/UserController.php");
+require_once("./controllers/LoginController.php");
+require_once("./controllers/TareaController.php");
+require_once("./controllers/UserController.php");
 
 class Router {
     function route($action, $request) {

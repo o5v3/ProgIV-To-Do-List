@@ -1,6 +1,6 @@
 <?php
-require_once("../models/Tarea.php");
-require_once("../utils/utils.php");
+require_once("./models/Tarea.php");
+require_once("./utils/utils.php");
 
 class TareaController {
     public function index() {
@@ -25,7 +25,7 @@ class TareaController {
             }
         }
         return $tareas;
-        header("location: ../views/tareas.php");
+        header("location: ./views/tareas.php");
     }
 
     public function showByUser($request)
@@ -65,7 +65,7 @@ class TareaController {
     }
 
     public function create($request) {
-        return include "../views/tareaCreate.php";
+        return include "./views/tareaCreate.php";
     }
 
     public function createTarea($request)
@@ -120,6 +120,4 @@ class TareaController {
         return True;
     }
 }
-
-session_start();
 ?>

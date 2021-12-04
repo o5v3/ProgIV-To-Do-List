@@ -1,15 +1,15 @@
 <?php 
-require_once("../models/User.php");
-require_once("../utils/utils.php");
+require_once("./models/User.php");
+require_once("./utils/utils.php");
 class LoginController {
 
     //Muestra pagina de login.
     public function index($request) {
-        return include "../views/index.php";
+        return include "./views/index.php";
     }
 
     public function login($request) {
-        return include "../views/login.php";
+        return include "./views/login.php";
     }
 
     //Realiza el proceso de iniciar sesión.
@@ -32,7 +32,7 @@ class LoginController {
 
     //Muestra la página de registro.
     public function register($request) {
-        return include "../views/registrar.php";
+        return include "./views/registrar.php";
     }
 
     public function registerUser($request) {
@@ -66,6 +66,4 @@ class LoginController {
         return True;
     }
 }
-
-session_start();
 ?>

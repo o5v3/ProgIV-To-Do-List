@@ -1,6 +1,6 @@
 <?php 
-require_once("../utils/utils.php");
-require_once("../models/User.php");
+require_once("./utils/utils.php");
+require_once("./models/User.php");
 class UserController {
 
     //Lista de usuarios. Solo para Admins.
@@ -57,6 +57,4 @@ class UserController {
         return True;
     }
 }
-
-session_start();
 ?>
